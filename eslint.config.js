@@ -75,7 +75,6 @@ export default defineConfig([
     },
     rules: {
       ...commonRules,
-      'vuejs-accessibility/vuejs-accessibility': 'warn',
       'vue/attributes-order': [
         'warn',
         {
