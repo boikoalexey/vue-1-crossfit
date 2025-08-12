@@ -16,7 +16,20 @@ export default {
     '**/.DS_Store',
   ],
   defaultSeverity: 'warning',
-  extends: ['stylelint-config-standard-scss'],
+  extends: [
+    'stylelint-config-recommended-vue',
+    'stylelint-config-standard-scss',
+  ],
+  overrides: [
+    {
+      files: ['**/*.vue'],
+      customSyntax: 'postcss-html',
+    },
+    {
+      files: ['**/*.scss'],
+      customSyntax: 'postcss-scss',
+    },
+  ],
   plugins: [
     'stylelint-scss',
     'stylelint-order',
