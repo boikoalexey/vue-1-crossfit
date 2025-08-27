@@ -111,10 +111,10 @@ export default defineConfig([
       'vuejs-accessibility/label-has-for': [
         'error',
         {
-          components: ['VLabel'],
-          controlComponents: ['VInput'],
+          components: ['label', 'VLabel'],
+          controlComponents: ['input', 'VInput'],
           required: {
-            every: ['nesting', 'id'],
+            every: ['id'],
           },
           allowChildren: false,
         },
@@ -122,7 +122,7 @@ export default defineConfig([
       'prettier/prettier': [
         'warn',
         {
-          singleAttributePerLine: true,
+          singleAttributePerLine: false,
           bracketSameLine: false,
         },
       ],
